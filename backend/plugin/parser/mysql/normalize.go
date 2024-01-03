@@ -34,7 +34,7 @@ func normalizeMySQLTableRefWithWildcard(ctx parser.ITableRefWithWildcardContext)
 		return "", identifier
 	}
 
-	return NormalizeMySQLIdentifier(ctx.DotIdentifier().Identifier()), identifier
+	return identifier, NormalizeMySQLIdentifier(ctx.DotIdentifier().Identifier())
 }
 
 // NormalizeMySQLColumnName normalizes the given column name.
